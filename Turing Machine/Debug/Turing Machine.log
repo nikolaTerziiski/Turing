@@ -1,2 +1,5 @@
-﻿  Turing Machine.cpp
-  Turing Machine.vcxproj -> C:\Users\Lenovo\Desktop\Turing Machine\Debug\Turing Machine.exe
+﻿  PalindromeMachine.cpp
+  Turing Machine.cpp
+  Generating Code...
+C:\Users\Lenovo\Desktop\Turing\Turing Machine\PalindromeMachine.cpp(64): warning C4715: 'Machine::validateMachine': not all control paths return a value
+  Turing Machine.vcxproj -> C:\Users\Lenovo\Desktop\Turing\Debug\Turing Machine.exe
