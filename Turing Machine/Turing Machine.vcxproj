@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CryptoMachine.cpp" />
     <ClCompile Include="PalindromeMachine.cpp" />
     <ClCompile Include="Turing Machine.cpp" />
   </ItemGroup>

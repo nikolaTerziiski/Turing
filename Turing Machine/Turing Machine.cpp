@@ -1,6 +1,7 @@
 #include <iostream>
 #include "fstream"
 #include "PalindromeMachine.h"
+#include "CryptoMachine.h"
 
 //Create struct double linkedlist for the tape of the turing machine
 
@@ -28,11 +29,19 @@ int main()
 	//}
 
 
-	std::string text = "acbabca";
-	Machine machine(text);
+	std::string palindrome = "acbabca";
+	std::string nonPalindrome = "rannndom";
+	std::string result;
 
-	if (machine.isPalindrome())
-		std::cout << "Yes";
-	else
-		std::cout << "No";
+	CryptoMachine crypting;
+	Machine machine(palindrome);
+
+	result = crypting.PalindromeEncrypt(palindrome);
+	std::cout << result << std::endl;
+	result = crypting.NonPalindromeEncrypt(nonPalindrome);
+	std::cout << result << std::endl;
+	result = crypting.NonPalindromeDecrypt(result);
+	std::cout << result << std::endl;
+
+
 }
