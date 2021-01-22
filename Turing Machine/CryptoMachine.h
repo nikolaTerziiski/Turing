@@ -32,5 +32,7 @@ class CryptoMachine : Machine {
 				delete[] this->first;
 			}
 		}
-	
+		void Print() {
+			this->print();
+		}
 };

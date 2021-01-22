@@ -7,7 +7,6 @@ class BinaryTransformMachine : Machine {
 private:
 	BinaryValidationMachine machine;
 
-	void insertString(std::string& s);
 	//Moves the iterator to the right
 	
 	//The algorithm for the transforming machine
@@ -45,5 +44,7 @@ public:
 			delete[] this->first;
 		}
 	}
-
+	void Print() {
+		this->print();
+	}
 };

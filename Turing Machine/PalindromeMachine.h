@@ -6,9 +6,6 @@
 //Tape  a b c b a _ _ _ _ _ 
 class PalindromeMachine : Machine {
 	private:
-		void insertString(std::string& s);
-		//Moves the iterator to the right
-
 		//The algorithm for the palindrome machine
 		bool validateMachine();
 	public:
@@ -38,5 +35,8 @@ class PalindromeMachine : Machine {
 			this->refresh();
 
 			return validateMachine();
+		}
+		void Print() {
+			this->print();
 		}
 };

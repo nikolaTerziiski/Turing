@@ -46,7 +46,6 @@ void CryptoMachine::Initialize(std::string& text)
 
 void CryptoMachine::Encrypt(std::string& text, bool isPalindrome)
 {
-
 	if (isPalindrome)
 		this->PalindromeCrypting();
 	else

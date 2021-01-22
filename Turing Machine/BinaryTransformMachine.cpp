@@ -1,30 +1,5 @@
 #include "BinaryTransformMachine.h"
 
-void BinaryTransformMachine::insertString(std::string& s)
-{
-	Node* q;
-	iterator = new Node;
-
-	//Declaration of iterator
-	iterator->prev = iterator->next = nullptr;
-	first = iterator;
-	for (int i = 0; i < s[i] != '\0'; i++)
-	{
-		q = new Node;
-		q->prev = iterator;
-		q->next = nullptr;
-		q->data = s[i];
-		iterator->next = q;
-		iterator = q;
-	}
-
-	iterator->next = new Node();
-	iterator->next->prev = iterator;
-	iterator->next->data = NULL;
-
-	iterator = first;
-}
-
 void BinaryTransformMachine::operate()
 {
 	std::string word = this->nodeAsWord();
@@ -96,7 +71,7 @@ std::string BinaryTransformMachine::nodeAsWord()
 		result += this->iterator->data;
 		this->moveRight();
 	}
-	std::cout << "Returning this node as string" << std::endl;
+	std::cout << "Returning this node as string with every change that is being made" << std::endl;
 	std::cout << result << std::endl;
 	return result;
 }

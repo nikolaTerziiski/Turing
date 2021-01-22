@@ -35,14 +35,22 @@ int main()
 	std::string nonPalindrome = "rannndom";
 	std::string result;
 
+	//Creating the palindrome machine with every string
 	PalindromeMachine machine(nonPalindrome);
 	PalindromeMachine machine2(palindrome);
 
+	//Encrypting every string, depends on if the string is palindrome or not
 	CryptoMachine crypto(nonPalindrome, machine.isPalindrome());
 	CryptoMachine crypto2(palindrome, machine2.isPalindrome());
 
+	//Changing the machine with while loop inside it
 	BinaryTransformMachine transform(palindrome); //All should be 1
 	BinaryTransformMachine transform2(nonPalindrome); //There should be only 2 ones
 
+	crypto.Print();
+	crypto2.Print();
+
+	transform.Print();
+	transform2.Print();
 	std::cout << std::endl;
 }
