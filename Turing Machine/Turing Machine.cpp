@@ -33,15 +33,14 @@ int main()
 	std::string nonPalindrome = "rannndom";
 	std::string result;
 
-	CryptoMachine crypting;
-	Machine machine(palindrome);
+	Machine machine(nonPalindrome);
+	Machine machine2(palindrome);
 
-	result = crypting.PalindromeEncrypt(palindrome);
-	std::cout << result << std::endl;
-	result = crypting.NonPalindromeEncrypt(nonPalindrome);
-	std::cout << result << std::endl;
-	result = crypting.NonPalindromeDecrypt(result);
-	std::cout << result << std::endl;
+	CryptoMachine crypto(nonPalindrome, machine.isPalindrome());
+	CryptoMachine crypto2(palindrome, machine2.isPalindrome());
 
+	crypto.Print();
+	std::cout << std::endl;
+	crypto2.Print();
 
 }

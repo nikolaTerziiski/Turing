@@ -1,14 +1,7 @@
 #include <iostream>
-
+#include "Node.h"
 #pragma once
 //Tape  a b c b a _ _ _ _ _ 
-
-struct Node {
-    char data;
-    struct Node* next;
-    struct Node* prev;
-};
-
 class Machine {
 	private:
 		Node* first;
