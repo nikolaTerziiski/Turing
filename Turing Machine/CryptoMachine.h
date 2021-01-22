@@ -1,15 +1,9 @@
 #include "iostream"
 #include "Node.h"
+#include "Machine.h"
 
-class CryptoMachine {
+class CryptoMachine : Machine {
 	private:
-		Node* first;
-		Node* iterator;
-		void moveLeft();
-		//Moves the iterator to the left
-		void moveRight();
-		void refresh();
-	
 		void PalindromeCrypting();
 		void NonPalindromeCrypting(std::string& text);
 		void Initialize(std::string& text);
@@ -39,5 +33,4 @@ class CryptoMachine {
 			}
 		}
 	
-		void Print();
 };

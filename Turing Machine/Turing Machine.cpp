@@ -2,6 +2,7 @@
 #include "fstream"
 #include "PalindromeMachine.h"
 #include "CryptoMachine.h"
+#include "BinaryTransformMachine.h"
 
 //Create struct double linkedlist for the tape of the turing machine
 
@@ -29,18 +30,19 @@ int main()
 	//}
 
 
-	std::string palindrome = "acbabca";
+	//Declaration of the strings one palindrom and one non-palindrome
+	std::string palindrome = "abccba";
 	std::string nonPalindrome = "rannndom";
 	std::string result;
 
-	Machine machine(nonPalindrome);
-	Machine machine2(palindrome);
+	PalindromeMachine machine(nonPalindrome);
+	PalindromeMachine machine2(palindrome);
 
 	CryptoMachine crypto(nonPalindrome, machine.isPalindrome());
 	CryptoMachine crypto2(palindrome, machine2.isPalindrome());
 
-	crypto.Print();
-	std::cout << std::endl;
-	crypto2.Print();
+	BinaryTransformMachine transform(palindrome); //All should be 1
+	BinaryTransformMachine transform2(nonPalindrome); //There should be only 2 ones
 
+	std::cout << std::endl;
 }

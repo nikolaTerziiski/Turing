@@ -1,7 +1,7 @@
 #include "PalindromeMachine.h"
 
 // a b a b a
-void Machine::insertString(std::string& s) {
+void PalindromeMachine::insertString(std::string& s) {
 
 	Node* q;
 	iterator = new Node;
@@ -26,14 +26,7 @@ void Machine::insertString(std::string& s) {
 	iterator = first;
 }
 
-void Machine::moveLeft() {
-	iterator = iterator->prev;
-}
-void Machine::moreRight() {
-	iterator = iterator->next;
-}
-
-bool Machine::validateMachine() {
+bool PalindromeMachine::validateMachine() {
 	char currentElement = this->iterator->data;
 	this->iterator->data = NULL;
 	if (this->iterator->next->data == NULL)
@@ -43,7 +36,7 @@ bool Machine::validateMachine() {
 
 	while (this->iterator->next->data != NULL)
 	{
-		this->moreRight();
+		this->moveRight();
 	}
 
 	if (this->iterator->data == currentElement)
@@ -61,8 +54,4 @@ bool Machine::validateMachine() {
 	{
 		return false;
 	}
-}
-
-void Machine::refresh() {
-	this->iterator = first->next;
 }

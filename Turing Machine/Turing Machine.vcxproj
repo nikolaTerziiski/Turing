@@ -139,12 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryTransformMachine.cpp" />
     <ClCompile Include="CryptoMachine.cpp" />
     <ClCompile Include="PalindromeMachine.cpp" />
     <ClCompile Include="Turing Machine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTransformMachine.h" />
+    <ClInclude Include="BinaryValidationMachine.h" />
     <ClInclude Include="CryptoMachine.h" />
+    <ClInclude Include="Machine.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="PalindromeMachine.h" />
   </ItemGroup>
