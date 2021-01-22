@@ -71,7 +71,5 @@ std::string BinaryTransformMachine::nodeAsWord()
 		result += this->iterator->data;
 		this->moveRight();
 	}
-	std::cout << "Returning this node as string with every change that is being made" << std::endl;
-	std::cout << result << std::endl;
 	return result;
 }
